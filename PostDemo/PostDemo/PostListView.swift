@@ -10,9 +10,9 @@ import SwiftUI
 import BBSwiftUIKit
 
 struct PostListView: View {
-    let category: PostListCategory
+    let category: PostListCategory // 枚举类型
     
-    @EnvironmentObject var userData: UserData
+    @EnvironmentObject var userData: UserData // 可被观察的类型
     
     var body: some View {
         BBTableView(userData.postList(for: category).list) { post in
